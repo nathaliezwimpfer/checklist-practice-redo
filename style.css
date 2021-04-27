@@ -1,0 +1,99 @@
+body {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: red;
+  padding: 20px 30px;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: white;
+  text-align: center;
+}
+
+.input {
+  width: 75%;
+  border: none;
+  color: grey;
+}
+
+.button {
+  background-color: #d9d9d9;
+  padding: 5px 15px;
+  border: none;
+  width: 25%;
+  color: grey;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  background-color: ##ddd;
+}
+
+li {
+  padding: 0px 0px 0px 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+li:nth-child(odd) {
+  background-color: #eee;
+}
+
+li:hover {
+  background: #ddd;
+  }
+
+  .checkmark {
+    font-family: sans-serif;
+    margin-right: 10px;
+    display: none;
+    color: white;
+  }
+
+.left-elements {
+  padding: 10px 15px;
+  display: flex;
+}
+
+.closing-x {
+  padding: 5px 10px;
+  font-family: sans-serif;
+}
+
+.closing-x:hover {
+  background-color: red;
+  color: white;
+}
+
+.checked-item {
+  color: #fff;
+  text-decoration: line-through;
+}
+
+.checked-closing-x {
+  color: white;
+  padding: 5px 10px;
+  font-family: sans-serif;
+}
+
+.checked-li {
+  background-color: hsla(0, 0%, 30%, 1);
+}
+
+.checked-checkmark {
+  color: white;
+  font-family: sans-serif;
+  margin-right: 10px;
+}
