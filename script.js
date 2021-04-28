@@ -2,23 +2,23 @@ const taskItem = document.getElementById('box-1');
 const itemText = document.getElementById('item');
 const checkmark = document.getElementById('checkmark');
 const closingX = document.getElementById('closing-x');
+let completionStatus = false;
 
-
-taskItem.addEventListener("click", toggleElements());
+taskItem.addEventListener('click', toggleElements);
 
 function toggleElements() {
-  if (checkIfItemIsIncomplete()) {
+  if (!checkIfItemIsComplete()) {
     markTaskItemComplete();
+    completionStatus = true;
   } else if (checkIfItemIsComplete()) {
     markTaskItemIncomplete();
+    completionStatus = false;
   }
 }
 
-function checkIfItemIsIncomplete() {
-  
+function checkIfItemIsComplete() {
+  return completionStatus;
 }
-
-
 
 function markTaskItemComplete() {
   turnItemBackgroundColorDarkGrey();
