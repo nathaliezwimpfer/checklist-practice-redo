@@ -1,3 +1,5 @@
+//mark items as complete and incomplete
+
 const taskItem = document.getElementById('box-1');
 const itemText = document.getElementById('item');
 const checkmark = document.getElementById('checkmark');
@@ -77,4 +79,11 @@ function removeCheckmark() {
 
 function turnClosingXBlack() {
   closingX.style.color = 'black';
+}
+
+//remove item from list
+closingX.addEventListener('click', removeItem);
+
+function removeItem() {
+  taskItem.remove();
 }
