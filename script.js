@@ -1,19 +1,45 @@
+const taskItems = [{
+  completionStatus: false,
+  element: document.getElementById('box-1'),
+  id: 'box-1',
+}];
+
+function toggleElement(elementId) {
+  const element = fetchTaskItemElement(elementId);
+  toggleTaskItem(element);
+}
+
+function fetchTaskItemElement(elementId) {
+  let element;
+  for (var i = 0; i < taskItems.length; i++) {
+    if (taskItems[i].id === elementId) {
+      element = taskItems[i].element;
+    }
+  }
+  return element;
+}
+
 //mark items as complete and incomplete
 
+const listOfItems = document.querySelector('.list-of-items');
 const taskItem = document.getElementById('box-1');
 const itemText = document.getElementById('item');
 const checkmark = document.getElementById('checkmark');
 const closingX = document.getElementById('closing-x');
 let completionStatus = false;
 
-taskItem.addEventListener('click', toggleElements);
+listOfItems.addEventListener('click', function () {
+  console.log('hello world'); // TODO THIS COMMIT: remove this
+});
 
-function toggleElements() {
-  if (!checkIfItemIsComplete()) {
-    markTaskItemComplete();
+// taskItem.addEventListener('click', toggleTaskItem);
+
+function toggleTaskItem(element) {
+  if (!checkIfItemIsComplete(element)) {
+    markTaskItemComplete(element);
     completionStatus = true;
-  } else if (checkIfItemIsComplete()) {
-    markTaskItemIncomplete();
+  } else if (checkIfItemIsComplete(element)) {
+    markTaskItemIncomplete(element);
     completionStatus = false;
   }
 }
