@@ -39,6 +39,7 @@ ul {
 }
 
 li {
+  cursor: pointer;
   padding: 0px 0px 0px 20px;
   list-style-type: none;
   display: flex;
